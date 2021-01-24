@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Duck;
 
 class Ducks extends Controller
 {
@@ -13,7 +14,8 @@ class Ducks extends Controller
      */
     public function index()
     {
-        //
+        $ducks = Duck::all();
+        return view("ducks.index", compact("ducks"));
     }
 
     /**

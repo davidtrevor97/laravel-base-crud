@@ -2,7 +2,14 @@
 
 <!-- MAIN CONTENT -->
 @section("content")
-    <h1>CIAO CIAO</h1>
+    <h1>Le nostre papere</h1>
+
+    @foreach($ducks as $duck)
+        <ul>
+            <li>Nomenclatura Binomia: <div class="card">{{ $duck->name }}</div></li>
+            <li>Livrea: <div class="card">{{ $duck->color }}</div></li>
+        </ul>
+    @endforeach
 
      <!-- <div>
         - Ripercorrere quanto fatto questa mattina insieme per la prima parte di CRUD: <br>
